@@ -13,11 +13,13 @@ public class Ser_humano {
     
     
   public static void main(String[] args) {
-   Corpo_humano c1 = new Corpo_humano(50,90);
-      System.out.println(c1.getdensidade());
-    }
-        
-        
-    
-        
-}
+   Corpo_humano c1 = new Corpo_humano(60,90,1.6);
+      System.out.println(c1.GetImc());
+ }
+   
+        //deu erro por causa que o atributo massa é privado
+
+        //alteracao para public o erro foi corrigido
+
+        //setvolume não pode ser acessado 
+

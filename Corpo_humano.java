@@ -14,14 +14,18 @@ public class Corpo_humano {
     private float massa;
         private float densidade;
         private float volume;
+        private double altura;
+        private double imc;
   
     
      
-        public Corpo_humano(float massa, float volume)
+        public Corpo_humano(float massa, float volume,double altura)
         {
             this.massa = massa;
             this.volume = volume; 
             densidade = massa/volume;
+           this.altura = altura;
+           imc = massa/(altura * altura);
         }
             
             public float Getmassa()
@@ -33,6 +37,14 @@ public class Corpo_humano {
             public float Getdensidade()
             {return densidade;
             }
+            public double GetAltura()
+    {
+        return altura;
+    }
+            public double GetImc()
+            {
+                return imc;
+            }
             public void setmassa(float massa)
             {
                 this.massa = massa;
@@ -42,5 +54,15 @@ public class Corpo_humano {
             {this.volume = volume;
             densidade = massa / volume;
             }
-        }        
+            public void SetAltura(float altura)
+            {this.altura = altura;
+            imc = massa/(altura * altura);
+            }
+            public void Setmassa(float massa)
+            {
+                this.massa = massa;
+                imc = massa / (altura * altura);
+            }
+    }
+   
 
